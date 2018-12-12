@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      App Compartir (Javier / Liliana)
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-card>
+    <ion-item>
+      <h2 #messageSubject>Liliana Osuna</h2>
+      <p>Diciembre 11, 2018</p>
+    </ion-item>
+    <!--https://i.imgur.com/aBlu9Gy.png-->
+    <!-- <img src="https://source.unsplash.com/category/technology/600x390"> -->
+    <img src="http://as01.epimg.net/epik/imagenes/2018/11/16/portada/1542384053_864693_1542384302_noticia_normal.jpg">
+    <ion-card-content>
+      <p #messageBody> D: </p>
+    </ion-card-content>
+    <ion-row>
+      <ion-col>
+        <button ion-button color="primary" clear small icon-left>
+          <ion-icon name="thumbs-up"></ion-icon>
+          <div>666K Likes</div>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button color="primary" clear small icon-left
+        (click)="sendShare(messageBody.innerText,
+        messageSubject.innerText,'https://i.imgur.com/aBlu9Gy.png')">
+          <ion-icon name="ios-share"></ion-icon>
+          <div>¡COMPARTIR! </div>
+        </button>
+      </ion-col>
+      <ion-col center text-center>
+        <ion-note>
+          Hace Un Minuto
+        </ion-note>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>
